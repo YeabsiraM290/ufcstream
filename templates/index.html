@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ super() }} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+ {% endblock %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid">
+
+     
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    
+        </ul>
+  
+  
+      <ul class="navbar-nav me-auto mb-2">
+
+        <a class="navbar-brand" href="#"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
+  
+      </ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="row text-center menu sticky-top">
+      <div class="col-4">FOOTBALL</div>
+      <div class="col-4">UFC</div>
+      <div class="col-4">BOXING</div>
+  </div>
+
+  <div class="row main">
+      <div class="col-8">
+        <!-- <iframe allow='encrypted-media' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://youtu.be/Ro_zceOYrb0'></iframe> -->
+        <iframe src="https://www.youtube.com/embed/Ro_zceOYrb0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+    </div>
+      <div class="col-4 text-center chat">
+        <p class="chat_title">Chat...</p>
+        <div class="scroll">
+          
+        <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>
+        <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
+        <hr>
+        
+  
+        
+        </div>
+
+        <div>
+            <form action="">
+                <input class="chat_input" type="text" placeholder="message"><span><i class="fas fa-share"></i></span>
+            </form>
+        </div>
+     
+      </div>
+  </div>
+
+  
+
+
+{% endblock %}

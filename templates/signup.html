@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ super() }} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup_login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+
+ {% endblock %}
+
+
+{% block content %}
+
+
+
+    <div class="card shadow p-4" id="login">
+      <h2 class="card-title text-center">Register</h2>
+      <form role="form" class="mb-2" action="{{ url_for('signup') }}" method="POST">
+        <div class="form-group">
+          <b>
+            {{ form.username.label (class='mt-3')}} </b>
+            {{ form.username(class='form-control mt-1', id="username") }}
+          </div>
+        <div class="form-group">
+          <b>
+            {{ form.email.label (class='mt-3')}}</b>
+            {{ form.email(class='form-control mt-1', id='email') }}
+        </div>
+        <div class="form-group">
+          <b>
+            {{ form.password.label (class='mt-3')}} </b>
+            {{ form.password(class='form-control mt-1', id='password') }}
+        </div>
+        <div class="form-group">
+          <b>
+            {{ form.confirm.label (class='mt-3')}}</b>
+            {{ form.confirm(class='form-control mt-1') }}
+          </div>
+          <div class="text-center">
+            {{ form.signup(class='btn btn-warning mt-4') }}
+          </div>
+         
+      </form>
+    
+     <div class="mt-4 text-center">Already have an account?<br> <a class="signup_link"  href="{{ url_for('index') }}">Sign in</a></div>
+      
+    </div>
+
+
+{% endblock %}

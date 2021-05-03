@@ -1,0 +1,110 @@
+body{
+
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.col-4{
+
+    border-right: 2px solid rgba(255, 255, 255, 0.212);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    
+}
+
+.menu{
+
+    background-image: linear-gradient(to right, rgba(44, 44, 44, 0.11), rgba(136, 136, 136, 0.356));;
+}
+
+.navbar{
+
+    background-color: black !important;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.11), rgba(255, 0, 0, 0.356));
+    padding: 0px;
+}
+
+.logo{
+
+   height: 70px;
+   width: 70px;
+}
+
+.main{
+    min-height: 79vh;
+    
+}
+
+.chat{
+
+    margin-top: 0.4rem;
+    color: white;
+}
+
+iframe{
+
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 0.1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 95%;
+
+}
+
+.chat_title{
+
+    font-size: 1.5rem;
+    color: rgba(243, 243, 243, 0.918);
+    margin-bottom: 0px !important;
+}
+
+.scroll {
+    
+    border: 5px solid rgb(71, 3, 3);
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 0.4rem;
+    color: white;
+    padding: 1rem;
+    width: 95%;
+    height: 26rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+.chat_input{
+
+    width: 90%;
+    margin-top: 0.7rem;
+    height: 2.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 1rem;
+
+}
+
+
+.fa-share{
+
+    font-size: 1.2rem;
+    margin-left: 0.3rem;
+    margin-right: 0.7rem;
+}
+
+.username{
+
+    background-color: rgb(82, 5, 5);
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.message{
+
+    font-size: 0.9rem;
+    color: rgb(201, 199, 199);
+    font-style: normal;
+}

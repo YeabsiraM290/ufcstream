@@ -1,0 +1,25 @@
+
+
+.card-title{
+
+    font-size: 1.5rem;
+}
+
+.form-control{
+
+    background-color: rgba(252, 252, 252, 0.644);
+    border-color: rgba(255, 247, 247, 0.452);
+    font-size: 0.9rem;
+
+}
+
+.card-title{
+
+    font-weight: bolder;
+}
+
+
+label{
+
+    font-size: 0.999rem;
+}
