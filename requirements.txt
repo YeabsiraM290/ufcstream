@@ -1,7 +1,7 @@
 Flask
 Flask-Session
 psycopg2-binary
-SQLAlchemy
+sqlalchemy < 1.4.0
 requests
 flask_wtf
 flask_sqlalchemy

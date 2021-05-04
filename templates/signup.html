@@ -15,6 +15,7 @@
 
     <div class="card shadow p-4" id="login">
       <h2 class="card-title text-center">Register</h2>
+      <p class="message mt-3">{{message}}</p>
       <form role="form" class="mb-2" action="{{ url_for('signup') }}" method="POST">
         <div class="form-group">
           <b>
@@ -42,7 +43,7 @@
          
       </form>
     
-     <div class="mt-4 text-center">Already have an account?<br> <a class="signup_link"  href="{{ url_for('index') }}">Sign in</a></div>
+     <div class="mt-4 text-center">Already have an account?<br> <a class="signup_link"  href="{{ url_for('login') }}">Sign in</a></div>
       
     </div>
 

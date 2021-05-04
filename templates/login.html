@@ -12,7 +12,8 @@
 
     <div class="card" id="login">
         <h2 class="card-title text-center">Login</h2>
-        <form role="form" action="{{ url_for('index') }}" method="POST">
+        <p class="message mt-3">{{message}}</p>
+        <form role="form" class="mb-2" action="{{ url_for('login') }}" method="POST">
     
           <div class="form-group">
               <b>{{ form.username.label(class='mt-1') }}</b>

@@ -2,7 +2,8 @@
 
 {% block head %}
 {{ super() }} 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 
  {% endblock %}
@@ -29,7 +30,25 @@
   
       <ul class="navbar-nav me-auto mb-2">
 
-        <a class="navbar-brand" href="#"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
+        <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
+  
+      </ul>
+
+      <ul class="navbar-nav  mb-2">
+
+        <li class="nav-item">
+          {% if user %}
+
+            <div class="btn-group dropstart">
+              <i class="far fa-user-circle user_icon" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+              </ul>
+            </div>
+       
+          {% endif %}
+
+        </li>
   
       </ul>
 
@@ -47,39 +66,29 @@
   <div class="row main">
       <div class="col-8">
         <!-- <iframe allow='encrypted-media' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://youtu.be/Ro_zceOYrb0'></iframe> -->
-        <iframe src="https://www.youtube.com/embed/Ro_zceOYrb0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        <iframe sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" src='//sportsbay.org/embed/103770/1/ufc-fight-night-sandhagen-vs-dillashaw-live.html'  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
     </div>
       <div class="col-4 text-center chat">
         <p class="chat_title">Chat...</p>
-        <div class="scroll">
-          
-        <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>
-        <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>   <p class="mb-3">12:30 <b class="username">Username</b> <i class="message">messeage.......</i></p>
-        <hr>
-        
-  
-        
+        <div class="scroll" id='messages'>
+
+       
         </div>
 
         <div>
-            <form action="">
-                <input class="chat_input" type="text" placeholder="message"><span><i class="fas fa-share"></i></span>
+            <form method="POST">
+              
+                <input class="chat_input" type="text" placeholder="message"><span> 
+                    <button type="submit" class="sendBtn"><i class="fas fa-share"></i></button> </span>
             </form>
         </div>
      
       </div>
   </div>
 
-  
+  <input style="display: none;" class="user_name" value=' {{user}}' type="text">
 
+  
+  <script src="{{ url_for('static', filename='js/messageHandler.js') }}" crossorigin="anonymous"></script>
 
 {% endblock %}

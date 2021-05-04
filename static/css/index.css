@@ -4,6 +4,24 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.dropdown-item{
+
+    font-size: 0.9rem;
+  
+  }
+  
+.logo{
+  
+      width: 45px;
+      height: 45px;
+  }
+  
+.user_icon{
+  
+    font-size: 2.3rem;
+    color: rgb(189, 189, 189);
+  }
+
 .col-4{
 
     border-right: 2px solid rgba(255, 255, 255, 0.212);
@@ -87,11 +105,13 @@ iframe{
 }
 
 
-.fa-share{
+.sendBtn{
 
-    font-size: 1.2rem;
-    margin-left: 0.3rem;
+    background-color:black ;
+    color: white;
     margin-right: 0.7rem;
+    border: none;
+
 }
 
 .username{
