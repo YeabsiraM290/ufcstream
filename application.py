@@ -87,8 +87,8 @@ def logout():
 
 
 @socketio.on('my event')
-def handle_my_custom_event(json):
-    socketio.emit('my response', json,  broadcast=True)
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    socketio.emit('my response', json)
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
