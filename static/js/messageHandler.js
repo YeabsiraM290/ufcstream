@@ -1,4 +1,4 @@
-var socket = io.connect('https://' + document.domain);
+var socket = io.connect('wss://' + document.domain);
 
 socket.on( 'connect', function() {
   socket.emit( 'my event', {
